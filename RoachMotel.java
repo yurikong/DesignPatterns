@@ -3,33 +3,40 @@ package ProjectDesignPatterns;
 import java.util.ArrayList;
 
 public class RoachMotel {
-
-	private RoachMotel() {
-		rooms = new ArrayList<RoomFactory>(capacity);
+    private RoachMotel() {
+		rooms = new ArrayList<Room>(capacity);
 		vacant = true;
 	}
-	private static RoachMotel instance;
-	private static ArrayList<RoomFactory> rooms;
+    
+	private static RoachMotel first_instance;
+	public ArrayList<Room> rooms;
 	private static boolean vacant;
 	private static int capacity = 10;
 	public static RoachMotel getInstance() {
-		if(instance == null)
-			instance = new RoachMotel();
-		return instance;
+		if(first_instance == null)
+			first_instance = new RoachMotel();
+		return first_instance;
 	}
+        
+    public ArrayList roomallocator(){
+        RoomFactory room=new RoomFactory();
+        
+        for (int i=0; i<capacity-3;i++)
+            this.rooms.add(room.createRoom("regular"));   
+        
+        for (int i=0; i<2;i++)
+            this.rooms.add(room.createRoom("deluxe"));   
+        
+        this.rooms.add(room.createRoom("suite"));
+        return this.rooms;
+        
+    }
 	public boolean isFull(){
             if (rooms.size()==0)
                 return true;
             else
                 return false;
 	}
-	
-	public ArrayList roomallocator(){
-        RoomFactory room=new RoomFactory();
-        // creates 10 rooms
-        for (int i=0; i<10;i++)
-            this.rooms.add(room);   
-        return this.rooms;
         
-    }
 }
+

@@ -31,11 +31,11 @@ public class RoachMotel {
         return this.rooms;
         
     }
-	public boolean isFull(){
+	public String isFull(){
             if (rooms.size()==0)
-                return true;
+                return "No vancancy, please enroll the waitlist";
             else
-                return false;
+                return "Vacancy";
 	}
         
 }

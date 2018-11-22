@@ -17,5 +17,7 @@ public class RoachMotel {
 			instance = new RoachMotel();
 		return instance;
 	}
+	public boolean isFull(){
+	}
 	
 }

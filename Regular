@@ -1,0 +1,7 @@
+public class Regular extends Room {
+    
+    public Regular (){
+        setType("regular");
+        setPrice(50);
+    }
+}

@@ -17,7 +17,7 @@ public class RoachMotel {
 			first_instance = new RoachMotel();
 		return first_instance;
 	}
-        
+       // creates as many regular roomsas needed, 2 deluxe and 1 suite (All these can be changed or suppressed as you will)
     public ArrayList roomallocator(){
         RoomFactory room=new RoomFactory();
         

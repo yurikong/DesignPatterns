@@ -18,6 +18,9 @@ public class RoachMotel {
 		return instance;
 	}
 	public boolean isFull(){
+            if (rooms.size()==0)
+                return true;
+            else
+                return false;
 	}
-	
 }

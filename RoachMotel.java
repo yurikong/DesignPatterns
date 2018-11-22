@@ -3,7 +3,7 @@ package ProjectDesignPatterns;
 import java.util.ArrayList;
 
 public class RoachMotel {
-    private RoachMotel() {
+    RoachMotel() {
 		rooms = new ArrayList<Room>(capacity);
 		vacant = true;
 	}
@@ -17,20 +17,30 @@ public class RoachMotel {
 			first_instance = new RoachMotel();
 		return first_instance;
 	}
-       // creates as many regular roomsas needed, 2 deluxe and 1 suite (All these can be changed or suppressed as you will)
+     
+        
     public ArrayList roomallocator(){
         RoomFactory room=new RoomFactory();
         
         for (int i=0; i<capacity-3;i++)
-            this.rooms.add(room.createRoom("regular"));   
+            this.rooms.add(room.createRoom("regular"));
         
         for (int i=0; i<2;i++)
-            this.rooms.add(room.createRoom("deluxe"));   
+            this.rooms.add(room.createRoom("deluxe")); 
         
         this.rooms.add(room.createRoom("suite"));
+        
+        for (int i=0;i<capacity;i++){
+            this.rooms.get(i).setRoom_number(i+100);
+        }
         return this.rooms;
         
     }
+    
+    public String printRoomsType(){
+        return rooms.toString();
+    }
+    
 	public String isFull(){
             if (rooms.size()==0)
                 return "No vancancy, please enroll the waitlist";
@@ -39,4 +49,3 @@ public class RoachMotel {
 	}
         
 }
-

@@ -23,4 +23,13 @@ public class RoachMotel {
             else
                 return false;
 	}
+	
+	public ArrayList roomallocator(){
+        RoomFactory room=new RoomFactory();
+        // creates 10 rooms
+        for (int i=0; i<10;i++)
+            this.rooms.add(room);   
+        return this.rooms;
+        
+    }
 }

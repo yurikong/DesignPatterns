@@ -1,0 +1,9 @@
+public class Suite extends Room {
+    
+    public Suite(){
+        setType("suite");
+        setPrice(100);
+       
+    }
+    
+}

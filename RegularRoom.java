@@ -1,7 +1,6 @@
 package ProjectDesignPatterns;
 
 public class RegularRoom extends Room {
-	private String description = "regular room";
-	public RegularRoom() {}
+	public RegularRoom() { description = "regular room"; }
 	public int cost() { return 50; }
 }

@@ -1,7 +1,6 @@
 package ProjectDesignPatterns;
 
 public class Suite extends Room {
-	private String description = "suite";
-	public Suite() {}
+	public Suite() { description = "suite"; }
 	public int cost() { return 100; }
 }

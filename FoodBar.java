@@ -1,6 +1,6 @@
 package ProjectDesignPatterns;
 
-public class FoodBar extends RoomDecorator {
+public class FoodBar extends Amenities {
 	Room room;
 	public FoodBar(Room room) {
 		this.room = room;

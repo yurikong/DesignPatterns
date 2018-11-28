@@ -1,5 +1,5 @@
 package ProjectDesignPatterns;
 
-public abstract class RoomDecorator extends Room {
+public abstract class Amenities extends Room {
 	public abstract String getDescription();
 }

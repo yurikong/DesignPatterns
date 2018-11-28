@@ -1,6 +1,6 @@
 package ProjectDesignPatterns;
 
-public class SprayResistantShower extends RoomDecorator {
+public class SprayResistantShower extends Amenities {
 	Room room;
 	public SprayResistantShower(Room room) {
 		this.room = room;

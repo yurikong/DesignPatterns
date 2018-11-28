@@ -1,6 +1,6 @@
 package ProjectDesignPatterns;
 
-public class Spa extends RoomDecorator {
+public class Spa extends Amenities {
 	Room room;
 	public Spa(Room room) {
 		this.room = room;

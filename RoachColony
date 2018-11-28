@@ -1,8 +1,19 @@
+import java.util.ArrayList;
+
 public class RoachColony {
     private String name;
     private int population;
     private double growth_rate;
     private ArrayList <String> amenities = new ArrayList<>();
+    
+    public RoachColony () {
+    	 this.name="default";
+         this.population=100;
+         this.growth_rate=2;  
+         this.amenities= amenities;
+    	
+    }
+    
     public RoachColony(String name, int population,double growth_rate, ArrayList amenities ){
         this.name=name;
         this.population=population;
@@ -11,7 +22,7 @@ public class RoachColony {
         
     }
     public RoachColony party() {
-    	this.population += this.population * this.growth_rate;
+    	this.population =  (int) Math.round(this.population * this.growth_rate);
     	return this;
     }
     public RoachColony insecticide() {
@@ -36,6 +47,9 @@ public class RoachColony {
 	public void setAmenities(ArrayList<String> amenities) {
 		this.amenities = amenities;
 	}
+	public void addAmenities(String amenity) {
+		this.amenities.add(amenity);
+	}
 	public void setName(String name) {
         this.name = name;
     }
@@ -58,3 +72,4 @@ public class RoachColony {
         
         
 }
+

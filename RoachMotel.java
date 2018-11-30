@@ -3,20 +3,23 @@ package ProjectDesignPatterns;
 import java.util.ArrayList;
 
 public class RoachMotel {
+	private static final int CAPACITY = 10;
 	private static RoachMotel instance;
 	private static RoomFactory factory;
-	private static int capacity = 20;
 	private static ArrayList<Room> rooms;
+	
 	private RoachMotel() {}
 	public static RoachMotel getInstance() {
 		synchronized(RoachMotel.class) {
-			if(instance == null) {
+			if(instance == null)
 				instance = new RoachMotel();
-				factory = new RoomFactory();
-				rooms = new ArrayList<>(capacity);
-			}
 		}
 		return instance;
 	}
-	
+	public void createRooms() {
+		rooms = new ArrayList<>(CAPACITY);
+	}
+	public String toString() {
+		return "";
+	}
 }

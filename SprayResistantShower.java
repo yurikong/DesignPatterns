@@ -6,7 +6,7 @@ public class SprayResistantShower extends Amenities {
 		this.room = room;
 	}
 	public String getDescription() {
-		return room.getDescription() + ", spray resistant shower";
+		return room.getDescription() + ", shower";
 	}
 	public int cost() {
 		return room.cost() + 25;

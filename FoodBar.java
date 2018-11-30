@@ -1,14 +1,18 @@
 package ProjectDesignPatterns;
 
 public class FoodBar extends Amenities {
-	Room room;
-	public FoodBar(Room room) {
+	
+	MotelRoom room;
+	public FoodBar(MotelRoom room)
+	{
 		this.room = room;
 	}
-	public String getDescription() {
-		return room.getDescription() + ", food bar";
+	public String getType()
+	{
+		return room.getType() + ", FoodBar";
 	}
-	public int cost() {
-		return room.cost() + 10;
+	public double cost()
+	{
+		return 10 + room.cost();
 	}
 }

@@ -1,5 +1,6 @@
 package ProjectDesignPatterns;
 
-public abstract class Amenities extends Room {
-	public abstract String getDescription();
+public abstract class Amenities extends MotelRoom {
+	
+	public abstract String getType();
 }

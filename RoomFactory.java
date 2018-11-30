@@ -3,26 +3,27 @@ package ProjectDesignPatterns;
 import java.util.ArrayList;
 
 public class RoomFactory {
-	
+
 	public RoomFactory() {}
-	public Room createRoom(String type, ArrayList<String> amenities) {
-		Room room = null;
-		if(type.equals("regular room"))
-			room = new RegularRoom();
-		else if(type.equals("deluxe room"))
-			room = new DeluxeRoom();
-		else if(type.equals("suite"))
+	public MotelRoom prepareRoom(String type, ArrayList<String> amenities)
+	{
+		MotelRoom room = null;
+		if(type.equals("Regular"))
+			room = new Regular();
+		else if(type.equals("Deluxe"))
+			room = new Deluxe();
+		else if(type.equals("Suite"))
 			room = new Suite();
 		else
 			return null;
-		if(amenities.contains("food bar"))
+		if(amenities.contains("FoodBar"))
 			room = new FoodBar(room);
-		if(amenities.contains("spa"))
+		if(amenities.contains("Spa"))
 			room = new Spa(room);
-		if(amenities.contains("food bar autorefill"))
-			room = new FoodBarAutorefill(room);
-		if(amenities.contains("spray resistant shower"))
-			room = new SprayResistantShower(room);
+		if(amenities.contains("RefillBar"))
+			room = new RefillBar(room);
+		if(amenities.contains("Shower"))
+			room = new Shower(room);
 		return room;
 	}
 }

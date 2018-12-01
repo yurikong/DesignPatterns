@@ -8,14 +8,13 @@ public class RoomFactory {
 	public MotelRoom prepareRoom(RoachColony rc, String type, ArrayList<String> amenities, int roomNumber)
 	{
 		MotelRoom room = null;
-		if(type.equals("Regular"))
-			room = new Regular();
-		else if(type.equals("Deluxe"))
-			room = new Deluxe();
-		else if(type.equals("Suite"))
-			room = new Suite();
-		else
-			return null;
+		switch(type)
+		{
+		case("Regular"): room = new Regular(); break;
+		case("Deluxe"): room = new Deluxe(); break;
+		case("Suite"): room = new Suite(); break;
+		default: return null;
+		}
 		if(amenities.contains("FoodBar"))
 			room = new FoodBar(room);
 		if(amenities.contains("Spa"))

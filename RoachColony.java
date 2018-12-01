@@ -16,16 +16,7 @@ public class RoachColony {
 		popu += (int)Math.round(popu * rate);
 		// notify RoachMotel
 	}
-	public void setPopu(int popu)
-	{
-		this.popu = popu;
-	}
-	public String getName()
-	{
-		return name;
-	}
-	public String toString()
-	{
-		return name + " " + popu;
-	}
+	public void setPopu(int popu) { this.popu = popu; }
+	public String getName() { return name; }
+	public String toString() { return name + " " + popu; }
 }

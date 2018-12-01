@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class RoomFactory {
 
 	public RoomFactory() {}
-	public MotelRoom prepareRoom(RoachColony rc, String type, ArrayList<String> amenities, int roomNumber)
+	public MotelRoom prepareRoom(String type, ArrayList<String> amenities)
 	{
 		MotelRoom room = null;
 		if(type.equals("Regular"))
@@ -24,8 +24,6 @@ public class RoomFactory {
 			room = new RefillBar(room);
 		if(amenities.contains("Shower"))
 			room = new Shower(room);
-		room.setGuest(rc);
-		room.setRoomNumber(roomNumber);
 		return room;
 	}
 }

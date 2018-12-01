@@ -13,7 +13,7 @@ public class RoachColony {
 	}
 	public void party()
 	{
-		popu = (int) (popu + popu * rate);
+		popu += (int)Math.round(popu * rate);
 		// notify RoachMotel
 	}
 	public void setPopu(int popu)

@@ -13,7 +13,16 @@ public class RoachColony {
 	}
 	public void party()
 	{
-		
+		popu = (int) (popu + popu * rate);
+		// notify RoachMotel
+	}
+	public void setPopu(int popu)
+	{
+		this.popu = popu;
+	}
+	public String getName()
+	{
+		return name;
 	}
 	public String toString()
 	{

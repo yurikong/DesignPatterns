@@ -1,0 +1,17 @@
+public class Shower extends Room{
+   Room room;
+  public Shower(Room room){
+     this.room= room;
+  }
+
+    @Override
+    public int getPrice() {
+        return 25 + room.getPrice();
+    }
+
+   
+    public String getDescription() {
+        return room.getRoom_number()+" "+ room.getType() +", Shower";
+    }
+    
+}

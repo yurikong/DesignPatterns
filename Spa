@@ -1,0 +1,18 @@
+public class Spa extends Room{
+   Room room;
+  public Spa(Room room){
+     this.room= room;
+  }
+
+    @Override
+    public int getPrice() {
+        return 20 + room.getPrice();
+    }
+
+    
+    public String getDescription() {
+        return room.getRoom_number()+" "+ room.getType() +", Spa";
+    }
+    
+    
+}

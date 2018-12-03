@@ -1,0 +1,11 @@
+public abstract class Amenities {
+    
+   String name;
+   double price;
+   
+   public abstract String getDescription(); 
+   
+   
+   public abstract int getPrice();
+
+}

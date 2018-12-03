@@ -1,4 +1,5 @@
-RoomFactory factory = new RoomFactory();
+public static void main(String[] args) {
+        RoomFactory factory = new RoomFactory();
         RoachMotel motel = new RoachMotel();
         
         motel.roomallocator();
@@ -11,3 +12,11 @@ RoomFactory factory = new RoomFactory();
         room_1 = new FoodBar(room_1);
         System.out.println(room_1.getDescription()+" Price: "+ room_1.getPrice());
         
+        
+        
+       
+        
+        
+    }
+    
+}

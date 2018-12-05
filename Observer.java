@@ -12,7 +12,7 @@
  * 			Waitlist of customers.
  */
 package ProjectDesignPatterns;
-
+//This is the interface to reflect the design pattern observer
 public interface Observer 
 {
 	public void update();

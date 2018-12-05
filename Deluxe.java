@@ -14,11 +14,12 @@
 package ProjectDesignPatterns;
 
 public class Deluxe extends MotelRoom {
-
+	//Constructor, sets our room type to "Deluxe"
 	public Deluxe() 
 	{
 		type = "Deluxe";
 	}
+	//Returns the cost of a "Deluxe" bedroom
 	public double cost() 
 	{
 		return 75;

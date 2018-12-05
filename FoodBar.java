@@ -20,10 +20,12 @@ public class FoodBar extends Amenities {
 	{
 		this.room = room; 
 	}
+	//Returns the type of room and the addition of a food bar as a string
 	public String getType()
 	{
 		return room.getType() + ", FoodBar"; 
 	}
+	//Returns the cost of the room and the cost of the food bar
 	public double cost() 
 	{
 		return 10 + room.cost(); 

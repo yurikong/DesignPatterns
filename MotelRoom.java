@@ -14,31 +14,37 @@
 package ProjectDesignPatterns;
 
 public abstract class MotelRoom {
-	
+	//Type refers to the room type such as "Deluxe"
 	protected String type = "Unknown";
 	protected int roomNumber;
 	protected RoachColony guest;
+	//Returns the type of room
 	public String getType() 
 	{
 		return type;
 	}
 	public abstract double cost();
+	//Room number setter
 	public void setRoomNumber(int roomNumber) 
 	{
 		this.roomNumber = roomNumber;
 	}
+	//Room number getter
 	public int getRoomNumber() 
 	{
 		return roomNumber; 
 	}
+	//Guest setter
 	public void setGuest(RoachColony rc) 
 	{
 		guest = rc; 
 	}
+	//Guest Getter
 	public RoachColony getGuest() 
 	{
 		return guest; 
 	}
+	//Return the room type and its cost as a string
 	public String toString() 
 	{
 		return getType() + " " + cost(); 

@@ -12,7 +12,7 @@
  * 			Waitlist of customers.
  */
 package ProjectDesignPatterns;
-
+//Abstract class with no methods
 public abstract class Amenities extends MotelRoom {
 	
 	public abstract String getType();

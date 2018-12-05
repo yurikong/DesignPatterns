@@ -2,50 +2,90 @@ package ProjectDesignPatterns;
 
 import java.util.ArrayList;
 
-public class RoachMotel {
-    RoachMotel() {
-		rooms = new ArrayList<Room>(capacity);
-		vacant = true;
+public class RoachMotel implements Subject{
+
+	private static RoachMotel instance;
+	private RoomFactory factory;
+	private ArrayList<MotelRoom> rooms;
+	private ArrayList<Integer> availableRooms;
+	private ArrayList<Observer> waitlist;
+	private final int CAPACITY = 5;
+	private boolean isFull;
+	private RoachMotel()
+	{
+		factory = new RoomFactory();
+		waitlist = new ArrayList<>();
+		isFull = false;
 	}
-    
-	private static RoachMotel first_instance;
-	public ArrayList<Room> rooms;
-	private static boolean vacant;
-	private static int capacity = 10;
-	public static RoachMotel getInstance() {
-		if(first_instance == null)
-			first_instance = new RoachMotel();
-		return first_instance;
+	private boolean isFull()
+	{
+		isFull = availableRooms.size() == 0 ? true : false;
+		return isFull;
 	}
-     
-        
-    public ArrayList roomallocator(){
-        RoomFactory room=new RoomFactory();
-        
-        for (int i=0; i<capacity-3;i++)
-            this.rooms.add(room.createRoom("regular"));
-        
-        for (int i=0; i<2;i++)
-            this.rooms.add(room.createRoom("deluxe")); 
-        
-        this.rooms.add(room.createRoom("suite"));
-        
-        for (int i=0;i<capacity;i++){
-            this.rooms.get(i).setRoom_number(i+100);
-        }
-        return this.rooms;
-        
-    }
-    
-    public String printRoomsType(){
-        return rooms.toString();
-    }
-    
-	public String isFull(){
-            if (rooms.size()==0)
-                return "No vancancy, please enroll the waitlist";
-            else
-                return "Vacancy";
+	public static RoachMotel getInstance()
+	{
+		if(instance == null)
+			instance = new RoachMotel();
+		return instance;
 	}
-        
+	public void createRooms()
+	{
+		rooms = new ArrayList<>(CAPACITY);
+		availableRooms = new ArrayList<>(CAPACITY);
+		for(int i = 101; i < 101 + CAPACITY; i++)
+			availableRooms.add(i);
+	}
+	public MotelRoom checkIn(RoachColony rc, String type, ArrayList<String> amenities)
+	{
+		System.out.println("available Rooms: " + availableRooms.toString());
+		if(isFull())
+		{
+			registerObserver(rc);
+			System.out.println("waitlist: " + waitlist.toString());
+			return null;
+		}
+		System.out.println("in set amenities: " + amenities.toString());
+		int roomNumber = availableRooms.get(0);
+		availableRooms.remove(0);
+		MotelRoom room = factory.prepareRoom(rc, type, amenities, roomNumber);
+		rc.setAmenities(amenities);
+		System.out.println(room.toString());
+		rooms.add(room);
+		isFull();
+		return room;
+	}
+	public double checkOut(MotelRoom room, int numberOfDays)
+	{
+		notifyObservers();
+		double cost = room.cost() * numberOfDays;
+		int roomNumber = room.getRoomNumber();
+		System.out.println("room number is: " + roomNumber);
+		int index = rooms.indexOf(room);
+		rooms.remove(index);
+		availableRooms.add(roomNumber);
+		isFull();
+		return cost;
+	}
+	public void registerObserver(Observer o)
+	{
+		waitlist.add(o);
+	}
+	public void removeObserver(Observer o)
+	{
+		waitlist.remove(o);
+	}
+	public void notifyObservers()
+	{
+		for(Observer o : waitlist)
+			o.update();
+		waitlist.clear();
+	}
+	public String toString()
+	{
+		String output = "motel: {";
+		for(MotelRoom mr : rooms)
+			output += mr.getType() + ", " + mr.cost() + "=" + mr.getGuest().toString() + ";";
+		output += "} available: " + availableRooms.toString();
+		return output;
+	}
 }

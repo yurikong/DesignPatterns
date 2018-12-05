@@ -2,14 +2,14 @@ package ProjectDesignPatterns;
 
 import java.util.ArrayList;
 
-public class RoachMotel {
+public class RoachMotel implements Subject{
 
 	private static RoachMotel instance;
 	private RoomFactory factory;
 	private ArrayList<MotelRoom> rooms;
 	private ArrayList<Integer> availableRooms;
-	private ArrayList<RoachColony> waitlist;
-	private int CAPACITY = 5;
+	private ArrayList<Observer> waitlist;
+	private final int CAPACITY = 5;
 	private boolean isFull;
 	private RoachMotel()
 	{
@@ -40,7 +40,7 @@ public class RoachMotel {
 		System.out.println("available Rooms: " + availableRooms.toString());
 		if(isFull())
 		{
-			waitlist.add(rc);
+			registerObserver(rc);
 			System.out.println("waitlist: " + waitlist.toString());
 			return null;
 		}
@@ -48,6 +48,7 @@ public class RoachMotel {
 		int roomNumber = availableRooms.get(0);
 		availableRooms.remove(0);
 		MotelRoom room = factory.prepareRoom(rc, type, amenities, roomNumber);
+		rc.setAmenities(amenities);
 		System.out.println(room.toString());
 		rooms.add(room);
 		isFull();
@@ -55,15 +56,29 @@ public class RoachMotel {
 	}
 	public double checkOut(MotelRoom room, int numberOfDays)
 	{
-		// notify waitlist
+		notifyObservers();
 		double cost = room.cost() * numberOfDays;
 		int roomNumber = room.getRoomNumber();
-		availableRooms.add(roomNumber);
 		System.out.println("room number is: " + roomNumber);
 		int index = rooms.indexOf(room);
 		rooms.remove(index);
+		availableRooms.add(roomNumber);
 		isFull();
 		return cost;
+	}
+	public void registerObserver(Observer o)
+	{
+		waitlist.add(o);
+	}
+	public void removeObserver(Observer o)
+	{
+		waitlist.remove(o);
+	}
+	public void notifyObservers()
+	{
+		for(Observer o : waitlist)
+			o.update();
+		waitlist.clear();
 	}
 	public String toString()
 	{

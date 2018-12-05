@@ -44,6 +44,6 @@ public class Tester {
         RoachColony rc9 = new RoachColony("Ninth colony",900,0.9);
         cost = rm.checkOut(r3,3);
         System.out.println("cost:" + cost);
-        MotelRoom r9 = rm.checkIn(rc9,"Regular",amenities2);
+        MotelRoom r9 = rm.checkIn(rc9,"Suite",amenities2);
 	}
 }

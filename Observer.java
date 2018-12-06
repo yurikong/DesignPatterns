@@ -15,5 +15,8 @@ package ProjectDesignPatterns;
 //This is the interface to reflect the design pattern observer
 public interface Observer 
 {
+	/**
+	 * Updates the observer when it receives notification
+	 */
 	public void update();
 }

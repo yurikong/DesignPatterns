@@ -13,12 +13,19 @@
  */
 package ProjectDesignPatterns;
 
-public class Regular extends MotelRoom {
-	
+public class Regular extends MotelRoom
+{
+	/**
+	 * Creates a new room of type "Regular".
+	 */
 	public Regular() 
 	{
 		type = "Regular"; 
 	}
+	/**
+	 * Returns the cost of a "Regular" room.
+	 * @return cost of this room.
+	 */
 	public double cost() 
 	{
 		return 50; 

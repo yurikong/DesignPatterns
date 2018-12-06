@@ -15,7 +15,18 @@ package ProjectDesignPatterns;
 
 public interface Subject 
 {
+	/**
+	 * Adds an observer to the notification list
+	 * @param o the observer that will receive notification
+	 */
 	public void registerObserver(Observer o);
+	/**
+	 * Removes an observer from the notification list
+	 * @param o the observer that will stop receiving notification
+	 */
 	public void removeObserver(Observer o);
+	/**
+	 * Notifies all members in the notification list
+	 */
 	public void notifyObservers();
 }

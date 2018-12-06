@@ -18,33 +18,59 @@ public abstract class MotelRoom {
 	protected String type = "Unknown";
 	protected int roomNumber;
 	protected RoachColony guest;
-	//Returns the type of room
+	/**
+	 * Returns the type of room.
+	 * @return type of room
+	 */
 	public String getType() 
 	{
 		return type;
 	}
+	/**
+	 * Returns the cost of room.
+	 * @return cost of room
+	 */
 	public abstract double cost();
-	//Room number setter
+	/**
+	 * Room number setter.
+	 * Sets the room number.
+	 * @param roomNumber room number
+	 */
 	public void setRoomNumber(int roomNumber) 
 	{
 		this.roomNumber = roomNumber;
 	}
-	//Room number getter
+	/**
+	 * Room number getter.
+	 * Gets the room number.
+	 * @return room number
+	 */
 	public int getRoomNumber() 
 	{
 		return roomNumber; 
 	}
-	//Guest setter
+	/**
+	 * Guest setter. "Guest" refers to a RoachColony.
+	 * Assigns "Guest" to the room.
+	 * @param rc RoachColony that occupies this room.
+	 */
 	public void setGuest(RoachColony rc) 
 	{
 		guest = rc; 
 	}
-	//Guest Getter
+	/**
+	 * Guest getter. "Guest" refers to a RoachColony.
+	 * Returns "Guest" of the room.
+	 * @return RoachColony that occupies this room.
+	 */
 	public RoachColony getGuest() 
 	{
 		return guest; 
 	}
-	//Return the room type and its cost as a string
+	/**
+	 * Returns the room type and its cost as a string.
+	 * @return room information and cost
+	 */
 	public String toString() 
 	{
 		return getType() + " " + cost(); 

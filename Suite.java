@@ -13,12 +13,19 @@
  */
 package ProjectDesignPatterns;
 
-public class Suite extends MotelRoom {
-
+public class Suite extends MotelRoom 
+{
+	/**
+	 * Creates a new room of type "Suite".
+	 */
 	public Suite() 
 	{
 		type = "Suite"; 
 	}
+	/**
+	 * Returns the cost of a "Suite" room.
+	 * @return cost of this room.
+	 */
 	public double cost() 
 	{
 		return 100; 

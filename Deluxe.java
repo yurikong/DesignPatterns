@@ -13,14 +13,20 @@
  */
 package ProjectDesignPatterns;
 
-public class Deluxe extends MotelRoom {
-	//Constructor, sets our room type to "Deluxe"
-	public Deluxe() 
+public class Deluxe extends MotelRoom
+{
+	/**
+	 * Creates a new room of type "Deluxe".
+	 */
+	public Deluxe()
 	{
 		type = "Deluxe";
 	}
-	//Returns the cost of a "Deluxe" bedroom
-	public double cost() 
+	/**
+	 * Returns the cost of a "Deluxe" room.
+	 * @return cost of this room.
+	 */
+	public double cost()
 	{
 		return 75;
 	}

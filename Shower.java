@@ -16,14 +16,24 @@ package ProjectDesignPatterns;
 public class Shower extends Amenities {
 
 	MotelRoom room;
+	/**
+	 * Adds amenities of spray resistant shower to this room.
+	 * @param room this room, to which spray resistant shower is added.
+	 */
 	public Shower(MotelRoom room) 
 	{
 		this.room = room; 
 	}
+	/** Returns the type of this room.
+	 * @return the type of room and the addition of a spray resistant shower as a string
+	 */
 	public String getType() 
 	{
 		return room.getType() + ", Shower"; 
 	}
+	/** Returns the cost of this room.
+	 * @return the cost of this room and the cost of spray resistant shower
+	 */
 	public double cost() 
 	{
 		return 25 + room.cost(); 

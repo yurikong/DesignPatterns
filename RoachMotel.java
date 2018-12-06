@@ -22,25 +22,41 @@ public class RoachMotel implements Subject{
 	private ArrayList<MotelRoom> rooms;
 	private ArrayList<Integer> availableRooms;
 	private ArrayList<Observer> waitlist;
-	private final int CAPACITY = 5;
+	private final int CAPACITY = 5; // default capacity of motel
 	private boolean isFull;
+	/**
+	 * Creates the only motel in town.
+	 * The motel has a room factory, a waitlist, and a vacancy sign.
+	 */
 	private RoachMotel()
 	{
 		factory = new RoomFactory();
 		waitlist = new ArrayList<>();
 		isFull = false;
 	}
+	/**
+	 * Returns the vacancy status of the motel.
+	 * @return true if motel is full
+	 */
 	private boolean isFull()
 	{
 		isFull = availableRooms.size() == 0 ? true : false;
 		return isFull;
 	}
+	/**
+	 * A reference of the only motel in town.
+	 * @return the only motel in town
+	 */
 	public static RoachMotel getInstance()
 	{
 		if(instance == null)
 			instance = new RoachMotel();
 		return instance;
 	}
+	/**
+	 * The motel keeps track of the rooms and the available rooms.
+	 * Room numbers start from 101
+	 */
 	public void createRooms()
 	{
 		rooms = new ArrayList<>(CAPACITY);
@@ -48,6 +64,14 @@ public class RoachMotel implements Subject{
 		for(int i = 101; i < 101 + CAPACITY; i++)
 			availableRooms.add(i);
 	}
+	/**
+	 * A RoachColony checks in to the next available room.
+	 * If there is no available rooms, it will be added to the waitlist.
+	 * @param rc RoachColony
+	 * @param type type of room
+	 * @param amenities a list of amenities that RoachColony wants
+	 * @return the next available room
+	 */
 	public MotelRoom checkIn(RoachColony rc, String type, ArrayList<String> amenities)
 	{
 		System.out.println("available Rooms: " + availableRooms.toString());
@@ -67,6 +91,13 @@ public class RoachMotel implements Subject{
 		isFull();
 		return room;
 	}
+	/**
+	 * A RoachColony checks out.
+	 * When a RoachColony checks out, notify all members of the waitlist and clear the list.
+	 * @param room the room to be checked out
+	 * @param numberOfDays how many days of stay
+	 * @return total cost of the room
+	 */
 	public double checkOut(MotelRoom room, int numberOfDays)
 	{
 		notifyObservers();
@@ -79,20 +110,33 @@ public class RoachMotel implements Subject{
 		isFull();
 		return cost;
 	}
+	/**
+	 * Adds a customer to the waitlist
+	 */
 	public void registerObserver(Observer o)
 	{
 		waitlist.add(o);
 	}
+	/**
+	 * Removes a member from the waitlist 
+	 */
 	public void removeObserver(Observer o)
 	{
 		waitlist.remove(o);
 	}
+	/**
+	 * Notifies all members of the waitlist and clear the list
+	 */
 	public void notifyObservers()
 	{
 		for(Observer o : waitlist)
 			o.update();
 		waitlist.clear();
 	}
+	/**
+	 * Returns relevant information of the motel.
+	 * @return motel information
+	 */
 	public String toString()
 	{
 		String output = "motel: {";

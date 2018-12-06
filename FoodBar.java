@@ -13,20 +13,28 @@
  */
 package ProjectDesignPatterns;
 
-public class FoodBar extends Amenities {
-	
+public class FoodBar extends Amenities
+{	
 	MotelRoom room;
+	/**
+	 * Adds amenities of a food bar to this room.
+	 * @param room this room, to which a food bar is added.
+	 */
 	public FoodBar(MotelRoom room) 
 	{
 		this.room = room; 
 	}
-	//Returns the type of room and the addition of a food bar as a string
+	/** Returns the type of this room.
+	 * @return the type of room and the addition of a food bar as a string
+	 */
 	public String getType()
 	{
 		return room.getType() + ", FoodBar"; 
 	}
-	//Returns the cost of the room and the cost of the food bar
-	public double cost() 
+	/** Returns the cost of this room.
+	 * @return the cost of this room and the cost of the food bar
+	 */
+	public double cost()
 	{
 		return 10 + room.cost(); 
 	}

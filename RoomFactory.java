@@ -17,7 +17,18 @@ import java.util.ArrayList;
 
 public class RoomFactory {
 
+	/**
+	 * Creates a new room factory.
+	 */
 	public RoomFactory() {}
+	/**
+	 * The factory prepares the room for the guest.
+	 * @param rc RoachColony that occupies the room
+	 * @param type type of room
+	 * @param amenities amenities that the RoachColony wants
+	 * @param roomNumber room number
+	 * @return room that is prepared
+	 */
 	public MotelRoom prepareRoom(RoachColony rc, String type, ArrayList<String> amenities, int roomNumber)
 	{
 		MotelRoom room = null;

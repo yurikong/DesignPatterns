@@ -16,14 +16,24 @@ package ProjectDesignPatterns;
 public class RefillBar extends Amenities {
 
 	MotelRoom room;
+	/**
+	 * Adds amenities of food bar refill to this room.
+	 * @param room this room, to which food bar refill is added.
+	 */
 	public RefillBar(MotelRoom room) 
 	{
 		this.room = room; 
 	}
+	/** Returns the type of this room.
+	 * @return the type of room and the addition of food bar refill as a string
+	 */
 	public String getType()
 	{
 		return room.getType() + ", RefillBar"; 
 	}
+	/** Returns the cost of this room.
+	 * @return the cost of this room and the cost of food bar refill
+	 */
 	public double cost() 
 	{
 		return 5 + room.cost(); 

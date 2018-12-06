@@ -16,14 +16,24 @@ package ProjectDesignPatterns;
 public class Spa extends Amenities {
 
 	MotelRoom room;
+	/**
+	 * Adds amenities of spa to this room.
+	 * @param room this room, to which spa is added.
+	 */
 	public Spa(MotelRoom room) 
 	{
 		this.room = room; 
 	}
+	/** Returns the type of this room.
+	 * @return the type of room and the addition of a spa as a string
+	 */
 	public String getType()
 	{
 		return room.getType() + ", Spa"; 
 	}
+	/** Returns the cost of this room.
+	 * @return the cost of this room and the cost of spa
+	 */
 	public double cost() 
 	{
 		return 20 + room.cost(); 

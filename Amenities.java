@@ -13,7 +13,11 @@
  */
 package ProjectDesignPatterns;
 //Abstract class with no methods
-public abstract class Amenities extends MotelRoom {
-	
+public abstract class Amenities extends MotelRoom 
+{
+	/**
+	 * Returns the type of the room with amenities.
+	 * @return type of room including amenities.
+	 */
 	public abstract String getType();
 }

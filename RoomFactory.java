@@ -1,10 +1,34 @@
+/* Jianqiang Du, Matthew Berrios, Ignacio Saenz de Navarrete Munar, Cesar Gonzalez
+ * December 5, 2018
+ * Purpose: This program simulates a roach motel that has different types of rooms
+ * 			that have complimentary amenities by choice. Each customer is a RoachColony.
+ * 			The motel allows customers to party and update its data. It utilizes
+ * 			4 design patterns: Singleton, Factory, Decorator, and Observer patterns.
+ * Inputs:	Customer name, population, growth rate. Room type, amenities.
+ * 			Numbers of days of stay.
+ * Outputs:	Information of occupied rooms and available rooms.
+ * 			Customer information (name, population).
+ * 			Room costs.
+ * 			Waitlist of customers.
+ */
 package ProjectDesignPatterns;
 
 import java.util.ArrayList;
 
 public class RoomFactory {
 
+	/**
+	 * Creates a new room factory.
+	 */
 	public RoomFactory() {}
+	/**
+	 * The factory prepares the room for the guest.
+	 * @param rc RoachColony that occupies the room
+	 * @param type type of room
+	 * @param amenities amenities that the RoachColony wants
+	 * @param roomNumber room number
+	 * @return room that is prepared
+	 */
 	public MotelRoom prepareRoom(RoachColony rc, String type, ArrayList<String> amenities, int roomNumber)
 	{
 		MotelRoom room = null;

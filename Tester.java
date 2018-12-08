@@ -11,38 +11,79 @@
  * 			Room costs.
  * 			Waitlist of customers.
  */
-package ProjectDesignPatterns;
-
 import java.util.ArrayList;
 
 public class Tester {
 
 	public static void main(String[] args)
 	{
+		// Here we create the motel and using getInstance() we ake sure that there is only one motel
 		RoachMotel rm = RoachMotel.getInstance();
+		// we create the room of the motel and we output them
         rm.createRooms();
         System.out.println(rm);
-        RoachColony rc1 = new  RoachColony("First colony",100,200);
+        System.out.println("***********************");
+        // here we instantiate a new roach colony that has booked certain amenities
+        
+        RoachColony rc1 = new  RoachColony("First colony",100,2);
+        // Amenities of this Colony
         ArrayList<String> amenities = new ArrayList<>();
         amenities.add("FoodBar");
         amenities.add("Spa");
         amenities.add("RefillBar");
         amenities.add("Shower");
+        
+        
+        System.out.println("First Colony is instantiated and has booked these amenities and it is ready to"
+        		+ "check in");
         MotelRoom r1 = rm.checkIn(rc1,"Suite",amenities);
+        
+        System.out.println("The first Colony is throwing a party!!!!!!!!!!!!!!! (They have showers)");
+        System.out.println("Population before the party");
         System.out.println(rc1);
+        System.out.println("Population after the party");
+        rc1.party(); // confirm popu is reduced with shower
+        System.out.println(rc1);
+       
+        System.out.println();
+        System.out.println("Update of available and used rooms");
         System.out.println(rm);
-        RoachColony rc2 = new RoachColony("Second colony",1000,0.2);
+        System.out.println("************************");
+        
+        System.out.println("The second colony is instantiated and has booked one amenity and it is ready "
+        		+ "to check in");
+        RoachColony rc2 = new RoachColony("Second colony",1000,1.5);
+        // Amenities of this Colony
         ArrayList<String> amenities2 = new ArrayList<>();
         amenities2.add("FoodBar");
         MotelRoom r2 = rm.checkIn(rc2,"Deluxe",amenities2);
+        
         System.out.println(rc2);
+        
+        System.out.println();
+        System.out.println("Update of available and used rooms");
         System.out.println(rm);
-        rc2.party();
+        System.out.println("************************");
+        System.out.println("The second Colony is throwing a party!!!!!!!!!!!!!!! (They do not have "
+        		+ "showers)");
+        System.out.println("Population before the party");
+        System.out.println(rc2);
+        System.out.println("Population after the party");
+        rc2.party(); // confirm popu is reduced with shower
         System.out.println(rc2);
         double cost = rm.checkOut(r2,3);
         System.out.println("cost:" + cost);
-        System.out.println(rm);
+        System.out.println();
+        System.out.println("Update of available and used rooms");
+        System.out.println(r2);
+        
+        
+        
+        
+        System.out.println("************************");
+        // Creation of other colonies to show that the program also works when the motel is at full capacity
         RoachColony rc3 = new RoachColony("Third colony",300,0.3);
+        
         MotelRoom r3 = rm.checkIn(rc3,"Regular",amenities2);
         RoachColony rc4 = new RoachColony("Fourth colony",400,0.4);
         MotelRoom r4 = rm.checkIn(rc4,"Regular",amenities2);

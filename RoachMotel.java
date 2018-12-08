@@ -78,6 +78,7 @@ public class RoachMotel implements Subject{
 		if(isFull())
 		{
 			registerObserver(rc);
+			System.out.println(rc.getName() + " is added to waitlist.");
 			System.out.println("waitlist: " + waitlist.toString());
 			return null;
 		}
@@ -89,6 +90,7 @@ public class RoachMotel implements Subject{
 		System.out.println(room.toString());
 		rooms.add(room);
 		isFull();
+		System.out.println(rc.getName() + " successfully checked in.");
 		return room;
 	}
 	/**
@@ -100,7 +102,12 @@ public class RoachMotel implements Subject{
 	 */
 	public double checkOut(MotelRoom room, int numberOfDays)
 	{
-		notifyObservers();
+		System.out.println("Checking out:");
+		if(room.getType().equals("Unknown"))
+		{
+			System.out.println("Room is not occupied. ");
+			return 0;
+		}
 		double cost = room.cost() * numberOfDays;
 		int roomNumber = room.getRoomNumber();
 		System.out.println("room number is: " + roomNumber);
@@ -108,6 +115,8 @@ public class RoachMotel implements Subject{
 		rooms.remove(index);
 		availableRooms.add(roomNumber);
 		isFull();
+		System.out.println("Check out successful.");
+		notifyObservers();
 		return cost;
 	}
 	/**

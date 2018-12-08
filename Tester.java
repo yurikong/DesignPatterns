@@ -11,13 +11,15 @@
  * 			Room costs.
  * 			Waitlist of customers.
  */
+package ProjectDesignPatterns;
+
 import java.util.ArrayList;
 
 public class Tester {
 
 	public static void main(String[] args)
 	{
-		// Here we create the motel and using getInstance() we ake sure that there is only one motel
+		// Here we create the motel and using getInstance() we make sure that there is only one motel
 		RoachMotel rm = RoachMotel.getInstance();
 		// we create the room of the motel and we output them
         rm.createRooms();
@@ -34,15 +36,15 @@ public class Tester {
         amenities.add("Shower");
         
         
-        System.out.println("First Colony is instantiated and has booked these amenities and it is ready to"
-        		+ "check in");
+        System.out.println("First Colony is instantiated and has booked these amenities and it is ready to check in");
         MotelRoom r1 = rm.checkIn(rc1,"Suite",amenities);
+        System.out.println(rm);
         
         System.out.println("The first Colony is throwing a party!!!!!!!!!!!!!!! (They have showers)");
         System.out.println("Population before the party");
         System.out.println(rc1);
-        System.out.println("Population after the party");
         rc1.party(); // confirm popu is reduced with shower
+        System.out.println("Population after the party");
         System.out.println(rc1);
        
         System.out.println();
@@ -64,15 +66,14 @@ public class Tester {
         System.out.println("Update of available and used rooms");
         System.out.println(rm);
         System.out.println("************************");
-        System.out.println("The second Colony is throwing a party!!!!!!!!!!!!!!! (They do not have "
-        		+ "showers)");
+        System.out.println("The second Colony is throwing a party!!!!!!!!!!!!!!! (They do not have showers)");
         System.out.println("Population before the party");
         System.out.println(rc2);
         System.out.println("Population after the party");
         rc2.party(); // confirm popu is reduced with shower
         System.out.println(rc2);
         double cost = rm.checkOut(r2,3);
-        System.out.println("cost:" + cost);
+        System.out.println("cost: " + cost);
         System.out.println();
         System.out.println("Update of available and used rooms");
         System.out.println(r2);
@@ -98,6 +99,7 @@ public class Tester {
         RoachColony rc9 = new RoachColony("Ninth colony",900,0.9);
         cost = rm.checkOut(r3,3);
         System.out.println("cost:" + cost);
+        System.out.println("Ninth Colony wants to check in.");
         MotelRoom r9 = rm.checkIn(rc9,"Suite",amenities2);
 	}
 }

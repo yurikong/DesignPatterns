@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+<class-diagram version="1.2.2" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
   <class id="1" language="java" name="ProjectDesignPatterns.Suite" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Suite.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="110" x="594" y="726"/>    
+    <position height="101" width="110" x="543" y="671"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +13,7 @@
   </class>  
   <interface id="2" language="java" name="ProjectDesignPatterns.Subject" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Subject.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="199" x="54" y="441"/>    
+    <position height="119" width="199" x="3" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +22,7 @@
   </interface>  
   <class id="3" language="java" name="ProjectDesignPatterns.FoodBar" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/FoodBar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="142" x="465" y="92"/>    
+    <position height="119" width="142" x="414" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +31,7 @@
   </class>  
   <class id="4" language="java" name="ProjectDesignPatterns.Tester" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Tester.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="124" x="376" y="-49"/>    
+    <position height="101" width="124" x="325" y="-104"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +40,7 @@
   </class>  
   <class id="5" language="java" name="ProjectDesignPatterns.Spa" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Spa.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="117" x="647" y="92"/>    
+    <position height="119" width="117" x="596" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +49,7 @@
   </class>  
   <class id="6" language="java" name="ProjectDesignPatterns.Regular" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Regular.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="110" x="744" y="726"/>    
+    <position height="101" width="110" x="693" y="671"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +58,7 @@
   </class>  
   <class id="7" language="java" name="ProjectDesignPatterns.Deluxe" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Deluxe.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="110" x="894" y="726"/>    
+    <position height="101" width="110" x="843" y="671"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +67,7 @@
   </class>  
   <class id="8" language="java" name="ProjectDesignPatterns.RoomFactory" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/RoomFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="390" x="314" y="441"/>    
+    <position height="101" width="390" x="263" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +76,7 @@
   </class>  
   <class id="9" language="java" name="ProjectDesignPatterns.RoachMotel" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/RoachMotel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="299" width="342" x="73" y="92"/>    
+    <position height="299" width="342" x="22" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +85,7 @@
   </class>  
   <class id="10" language="java" name="ProjectDesignPatterns.Amenities" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Amenities.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="112" x="863" y="-49"/>    
+    <position height="101" width="112" x="812" y="-104"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +94,7 @@
   </class>  
   <class id="11" language="java" name="ProjectDesignPatterns.Shower" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Shower.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="137" x="804" y="92"/>    
+    <position height="119" width="137" x="753" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +103,7 @@
   </class>  
   <class id="12" language="java" name="ProjectDesignPatterns.MotelRoom" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/MotelRoom.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="245" width="180" x="744" y="441"/>    
+    <position height="245" width="180" x="693" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -111,7 +112,7 @@
   </class>  
   <interface id="13" language="java" name="ProjectDesignPatterns.Observer" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/Observer.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="83" width="114" x="274" y="1029"/>    
+    <position height="83" width="114" x="223" y="974"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -120,7 +121,7 @@
   </interface>  
   <class id="14" language="java" name="ProjectDesignPatterns.RoachColony" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/RoachColony.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="263" width="221" x="333" y="726"/>    
+    <position height="263" width="221" x="282" y="671"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -129,128 +130,128 @@
   </class>  
   <class id="15" language="java" name="ProjectDesignPatterns.RefillBar" project="CECS 277" 
     file="/CECS 277/src/ProjectDesignPatterns/RefillBar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="141" x="981" y="92"/>    
+    <position height="119" width="141" x="930" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="16">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="17" name="instance"/>      
-      <multiplicity id="18" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="19">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="20" name="room"/>      
-      <multiplicity id="21" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="22">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <generalization id="23">    
-    <end type="SOURCE" refId="1"/>    
+  <generalization id="16">    
+    <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="12"/>  
   </generalization>  
-  <association id="24">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="25" name="room"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="27">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <generalization id="28">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <association id="29">    
+  <association id="17">    
+    <bendpoint x="232" y="386"/>    
+    <bendpoint x="232" y="671"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="30" name="factory"/>      
-      <multiplicity id="31" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="33" name="rooms"/>      
-      <multiplicity id="34" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="35">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <realization id="36">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <association id="37">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="38" name="room"/>      
-      <multiplicity id="39" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="40">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="41" name="room"/>      
-      <multiplicity id="42" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="43">    
-    <bendpoint x="283" y="441"/>    
-    <bendpoint x="283" y="726"/>    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="44" name="waitlist"/>      
-      <multiplicity id="45" minimum="0" maximum="2147483647"/>    
+      <attribute id="18" name="waitlist"/>      
+      <multiplicity id="19" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="46">    
-    <bendpoint x="1152" y="92"/>    
-    <end type="SOURCE" refId="10"/>    
+  <generalization id="20">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="22">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="23" name="instance"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="12"/>  
   </generalization>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="12"/>  
+  <association id="26">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="27" name="room"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="29">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="30">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="31">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="32" name="room"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="35" name="room"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="38" name="factory"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="40">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
   </generalization>  
-  <generalization id="48">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="49">    
+  <association id="41">    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="50" name="guest"/>      
-      <multiplicity id="51" minimum="0" maximum="1"/>    
+      <attribute id="42" name="guest"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="52">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
+  <generalization id="44">    
+    <bendpoint x="1101" y="37"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="45">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="46" name="rooms"/>      
+      <multiplicity id="47" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="49">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="50">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="51" name="room"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

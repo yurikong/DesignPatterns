@@ -42,7 +42,7 @@ public class RoachColony implements Observer{
 	{
 		popu += (int)Math.round(popu * rate);
 		if(amenities.contains("Shower"))
-			popu *= 0.25;
+			popu *= 0.75;
 		else
 			popu *= 0.5;
 	}

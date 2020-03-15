@@ -2,10 +2,13 @@
 
 For this assignment, you will be using some of the design patterns we discussed:
     
-    ***Singleton***
-    ***Decorator***
-    ***Factory***
-    ***Observer***
+***Singleton***
+
+***Decorator***
+
+***Factory***
+
+***Observer***
 
 You will use these patterns in creating a Roach Motel. There can be only one Roach Motel. The Roach Motel will be created with an initial capacity (number of rooms).
 

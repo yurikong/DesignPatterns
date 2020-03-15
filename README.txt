@@ -21,6 +21,5 @@
 @ When a room does become vacant, we notify every colony on the list then clear out the list.
 @ When the colony receives the notification, the colony will display a message that the notification has been received along with the name of the motel that sent it.
 @ When the roaches check out, we calculate the bill as the room rate mulitplied by the numbers of days that the RoachColony has been our guest. Then we make that room available.
-@ When a colony checks out of the motel, they will either use RoachPal or their MasterRoach credit card to pay the bill. Roach Pay requires the name and email of the colony paying the bill. The MasterRoach credit card requires a name, a security code, a card number and an expiration date.
 @ All payments made will be written to a transaction log. This log will contain the name of the colony, the type of payment made and the amount.
 @ You will need a method to display the contents of the transaction log before you exit the program.

@@ -3,8 +3,6 @@
     Decorator
     Factory
     Observer
-    Strategy
-    Visitor
 @ You will use these patterns in creating a Roach Motel. There can be only one Roach Motel. The Roach Motel will be created with an initial capacity (number of rooms).
 @ When the motel is full, turn on the no vacancy sign. Otherwise the vacancy sign should be shown
 @ Each of the rooms start out at the base rate but you can add amenities only when a customer checks in. Your customer will be a Roach Colony.
@@ -26,10 +24,3 @@
 @ When a colony checks out of the motel, they will either use RoachPal or their MasterRoach credit card to pay the bill. Roach Pay requires the name and email of the colony paying the bill. The MasterRoach credit card requires a name, a security code, a card number and an expiration date.
 @ All payments made will be written to a transaction log. This log will contain the name of the colony, the type of payment made and the amount.
 @ You will need a method to display the contents of the transaction log before you exit the program.
-@ The motel is very concerned with cleanliness. Every day the maid staff cleans each of the rooms.
-@ The different types of rooms are cleaned differently:
-    All rooms have their linens changed on every bed.
-    For the basic room, only towels that are on the floor are replaced.
-    For the deluxe room, all towels are changed.
-    For the suite, all towels are changed and there is a hamburger placed on each pillow.
-@ However, if the room has put out the "Do Not Distrub" sign, the room will not be cleaned.
